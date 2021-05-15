@@ -92,11 +92,11 @@ video.addEventListener("play", () => {
     faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
     detections.map((detection) => {
       console.log(detection.expressions);
-      if (detection.expressions.sad > 0.5) {
+      if (detection.expressions.sad > 0.2) {
         questioningReaction()
-      } else if (detection.expressions.happy > 0.5) {
+      } else if (detection.expressions.happy > 0.2) {
         understandingReaction()
-      } else if (detection.expressions.surprised > 0.5) {
+      } else if (detection.expressions.surprised > 0.2) {
         questioningReaction()
       } else if (detection.expressions.disgusted > 0.5) {
         understandingReaction()
